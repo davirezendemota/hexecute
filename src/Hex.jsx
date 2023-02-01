@@ -1,7 +1,15 @@
-export default function Hex() {
+export function Hex() {
   return(
-    <div>
+    <div className="hex">
       HEX
+    </div>
+  )
+}
+
+export function HexInput(){
+  return(
+    <div className="hex">
+      +
     </div>
   )
 }

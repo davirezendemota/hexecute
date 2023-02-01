@@ -1,6 +1,8 @@
 import { Children, useState } from 'react';
 
-import Hex from './Hex'
+import {Hex} from './Hex'
+import {HexInput} from './Hex'
+import {Options} from './Options'
 
 export default function App() {
 
@@ -40,15 +42,22 @@ export default function App() {
   };
 
   const HexWrapper = () => {
+
+    const arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+
     return(
-    <>
-      <Hex></Hex>
-    </>
+    <div className='wrapper'>
+      {
+        arr.map((item,idx) => <Hex key={idx}/>)
+      }
+      <HexInput></HexInput>
+    </div>
     )
   }
 
   return (
     <div id="App">
+      <h1 className='title'>Title</h1>
       <div id="child"
         style={{
           position: "relative",
@@ -61,6 +70,7 @@ export default function App() {
       >
         <HexWrapper/>
       </div>
+      <Options/>
     </div>
   );
 }
