@@ -1,1 +1,0 @@
-- [ ] Add zoom scaling with scroll
