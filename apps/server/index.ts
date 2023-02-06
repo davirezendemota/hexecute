@@ -4,6 +4,7 @@ import bodyParser from 'body-parser'
 
 const server = express()
 
+// read body request
 server.use(bodyParser.json())
 
 // 404 Page
