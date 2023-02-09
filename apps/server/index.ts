@@ -1,7 +1,7 @@
 // IMPORTS
 import express, {Request, Response} from 'express'
 import bodyParser from 'body-parser'
-import routes from './routes'
+import router from './router'
 // #####
 
 const server = express()
@@ -9,8 +9,8 @@ const server = express()
 // read body request
 server.use(bodyParser.json())
 
-//
-server.use(routes)
+// server routes
+server.use(router)
 
 // 404 Page
 server.use((req: Request, res: Response) => {
